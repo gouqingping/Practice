@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            内容管理
+        </title>
+        <link rel="shortcut icon" href="static/bitbug_favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/todc-bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/content.css">
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/common.js"></script>
+        <script src="static/js/bootstrap.js"></script>
+		<script src="static/js/responsive-nav.min.js"></script>
+    </head>
+    <body>
+        <!-- 小黑屋-->
+        <div class="bg blackroom none">
+        </div>
+        <div class="modal-dialog room none">
+            <div class="modal-ok">
+            	<div class="animate">
+                	<div class="offno">
+                    	<span class="black">对<b>POPOVER</b>的操作</span>
+                	</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">处理日期:</div>
+                    <div class="col-md-9 red">2015.02.25 12:00</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">处理方式:</div>
+                    <div class="col-md-9">
+                        <div class="col-lg-1">
+                           <select class="form-control">
+                                <option>封停投诉内容</option>
+                                <option selected="true">理由不充分驳回诉讼</option>
+                           </select>
+                         </div>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">解封日期:</div>
+                    <div class="col-md-9">无</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">处理原因:</div>
+                    <div class="col-md-9">
+                        <div class="text-div" contenteditable="true"><p></p></div>
+                    </div>
+                    <div class="cle"></div>
+                </div>
+                <br />
+                <br />
+                <div class="offno">
+                    <a href="javascript:void(0);" onclick="room()" class="btn btn-default">关闭</a>
+                    <a href="javascript:void(0);" onclick="room()" class="btn btn-primary">保存并关闭</a>
+                </div>
+                <br />
+            </span></span></div>
+        </div><span class="black"><span>
+        <!--个人资料 -->
+        <div class="bg tion none"></div>
+        <div class="modal-dialog operation none"> 
+            <div class="modal-ok">
+            	<div class="animate">
+                	<div class="neme">
+                    	<div class="photo-img left"><img class="toux" src="static/images/tx-man.png" /></div>
+                    	<h5 class="left">POPOVER12345678</h5>
+                        <div class="cle"></div>
+                	</div>
+                </div> 
+            <div class="col-md-12">
+                <div class="details">
+                    <div class="col-md-3">ID:</div>
+                    <div class="col-md-9">5468435</div>
+                    <div class="cle"></div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">邮箱:</div>
+                    <div class="col-md-9">popover@emil.com</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">平台:</div>
+                    <div class="col-md-9">IPhone手机客户端</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">性别:</div>
+                    <div class="col-md-9">男</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">注册ID:</div>
+                    <div class="col-md-9">192.168.1.255</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">城市:</div>
+                    <div class="col-md-9">成都</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">国家:</div>
+                    <div class="col-md-9">中国</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">省份:</div>
+                    <div class="col-md-9">四川</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">个性网址:</div>
+                    <div class="col-md-9">http://niuniu.com/popover</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">注册时间:</div>
+                    <div class="col-md-9">2015.01.25</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">最后登陆:</div>
+                    <div class="col-md-9">2015.04.20</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">牛币:</div>
+                    <div class="col-md-9">2505</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">发帖数:</div>
+                    <div class="col-md-9">1118</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">状态:</div>
+                    <div class="col-md-9 green">正常<!--封停 class="col-md-9 red"--></div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">介绍:</div>
+                    <div class="col-md-9">是否不希望在小屏幕设备上所有列都堆叠在一起？</div>
+                </div>
+                <div class="cle"></div>
+                <div class="neme">
+                    <a href="javascript:void(0);" onclick="operation()" class="btn btn-default">关闭</a>
+                </div>
+                </div>
+            </div>
+        </div>
+<!-- NAV -->
+<div class="navbar navbar-inverse left">
+    <div class="navbar-header">
+      <!-- 自适应隐藏导航展开按钮 -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav sidebar adm">
+            <h3>后台管理</h3><br/>
+            <li><a href="index.html">面板</a></li>
+            <li><a href="user.html">用户</a></li>
+            <li class="active act"><a href="content.html">内容</a></li>
+            <li><a href="interest.html">兴趣</a></li>
+            <li><a href="publicize.html">灯箱</a></li>
+            <li><a href="#">牛币</a></li>
+            <li><a href="#" style="padding-left: 40px;">认证</a></li>
+            <li><a href="#" style="padding-left: 40px;">打款</a></li>
+            <div class="admin">
+                <span>管理员001</span>|
+                <a href="#">退出</a>
+            </div>
+        </ul>
+    </div>
+</div>
+
+        <div class="adm-user">
+            <div class="main-box clearfix">
+            	<div class="col-lg-1">
+                    <select class="form-control">
+                        <option>回复</option>
+                        <option>帖子</option>
+                        <option selected="true">投诉</option>
+                    </select>
+                </div>
+                <input class="form-control adm-search left" type="text" placeholder="搜索">
+                <a class="btn btn-default left" type="submit">搜索</a>
+                <div class="cle"></div>
+            </div>
+            <div class="text-center">
+             <h3>投诉中心</h3>
+             <hr />
+            </div>
+            <div class="table-responsive table-res clearfix">
+                <table class="table table-hover text-left">
+                    <thead>
+                        <tr>
+                            <th class="th"><a href="javascript:void(0);">编号 </a></th>
+                            <th class="th"><a href="javascript:void(0);">投诉人</a></th>
+                            <th class="th"><a href="javascript:void(0);">投诉类型</a></th>
+                            <th class="th"><a href="javascript:void(0);">问题内容</a></th>
+                            <th class="th"><a href="javascript:void(0);">投诉状态</a></th>
+                            <th class="th"><a href="javascript:void(0);">投诉时间</a></th>
+                            <th class="adm-son"><a href="javascript:void(0);">投诉原因</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#" onclick="operation()">POPOVER</a></td>
+                            <td><span>辱骂他人</span></td>
+                            <td><a href="#">查看</a></td>
+                            <td><span class="red">未处理</span></td>
+                            <td><span>2015.02.25</span></td>
+                            <td class="col-sm-3"><span>有一句话说：“失败是成功之母。”罗曼罗兰也曾说过：“要化悲痛为力量。”的确，当我们面对失败时，一定不能一蹶不振，要学会微笑面对失败。不要把失败当成什么了不起的大事而去狠它，因为狠你的敌人会影响判断力。我们应该把失败看得轻一点，只有这样，才能战胜它，胜败乃兵家常事嘛。</span></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="2" />002</label></td>
+                            <td><a href="#" onclick="operation()">POPOVER</a></td>
+                            <td><span>辱骂他人</span></td>
+                            <td><a href="#">查看</a></td>
+                            <td><span class="red">未处理</span></td>
+                            <td><span>2015.02.25</span></td>
+                            <td class="col-sm-3"><span>有一句话说：“失败是成功之母。”罗曼罗兰也曾说过：“要化悲痛为力量。”的确，当我们面对失败时，一定不能一蹶不振，要学会微笑面对失败。不要把失败当成什么了不起的大事而去狠它，因为狠你的敌人会影响判断力。我们应该把失败看得轻一点，只有这样，才能战胜它，胜败乃兵家常事嘛。</span></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="3" />003</label></td>
+                            <td><a href="#" onclick="operation()">POPOVER</a></td>
+                            <td><span>辱骂他人</span></td>
+                            <td><a href="#">查看</a></td>
+                            <td><span class="red">未处理</span></td>
+                            <td><span>2015.02.25</span></td>
+                            <td class="col-sm-3"><span>有一句话说：“失败是成功之母。”罗曼罗兰也曾说过：“要化悲痛为力量。”的确，当我们面对失败时，一定不能一蹶不振，要学会微笑面对失败。不要把失败当成什么了不起的大事而去狠它，因为狠你的敌人会影响判断力。我们应该把失败看得轻一点，只有这样，才能战胜它，胜败乃兵家常事嘛。</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--回复-->
+            <div style="display:none">
+            <div class="text-center">
+             <h3>回复</h3>
+             <hr />
+            </div>
+            <div class="table-responsive clearfix">
+                <table class="table table-hover text-left">
+                    <thead>
+                        <tr>
+                            <th class="th"><a href="javascript:void(0);">编号 </a></th>
+                            <th class="th"><a href="javascript:void(0);">回复人</a></th>
+                            <th class="th"><a href="javascript:void(0);">发帖时间</a></th>
+                            <th class="th"><a href="javascript:void(0);">修改时间</a></th>
+                            <th class="th"><a href="javascript:void(0);">删除时间</a></th>
+                            <th class="th"><a href="javascript:void(0);">平台</a></th>
+                            <th class="th"><a href="javascript:void(0);">状态</a></th>
+                            <th class="th"><a href="javascript:void(0);">赞助</a></th>
+                            <th class="th"><a href="javascript:void(0);">内容</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#" onclick="operation()">POPOVER</a></td>
+                            <td><span>2015.2.25</span></td>
+                            <td><span>2015.2.26</span></td>
+                            <td><span></span></td>
+                            <td><span class="red">Android</span></td>
+                            <td><span class="green">正常</span></td>
+                            <td><span>255</span></td>
+                            <td class="col-sm-3"><span>把南京后飞吧四点半和免费大巴上班的发送不放吧上播放机哈斯广发萨斯办法说</span></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#" onclick="operation()">POPOVER</a></td>
+                            <td><span>2015.2.25</span></td>
+                            <td><span>2015.2.26</span></td>
+                            <td><span></span></td>
+                            <td><span class="red">Android</span></td>
+                            <td><span class="red">封禁</span></td>
+                            <td><span>255</span></td>
+                            <td class="col-sm-3"><span>把南京后飞吧四点半和免费大巴上班的发送不放吧上播放机哈斯广发萨斯办法说</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <!--帖子-->
+            <div style="display:none">
+            <div class="text-center">
+             <h3>帖子</h3>
+             <hr />
+            </div>
+            <div class="table-res table-responsive clearfix">
+                <table class="table table-hover text-left">
+                    <thead>
+                        <tr>
+                            <th class="th"><a href="javascript:void(0);">编号 </a></th>
+                            <th class="th"><a href="javascript:void(0);">回复人</a></th>
+                            <th class="th"><a href="javascript:void(0);">发帖时间</a></th>
+                            <th class="th"><a href="javascript:void(0);">修改时间</a></th>
+                            <th class="th"><a href="javascript:void(0);">删除时间</a></th>
+                            <th class="th"><a href="javascript:void(0);">平台</a></th>
+                            <th class="th"><a href="javascript:void(0);">状态</a></th>
+                            <th class="th"><a href="javascript:void(0);">赞助</a></th>
+                            <th class="th"><a href="javascript:void(0);">兴趣（名称）</a></th>
+                            <th class="th"><a href="javascript:void(0);">标题</a></th>
+                            <th class="th"><a href="javascript:void(0);">内容</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#" onclick="operation()">POPOVER</a></td>
+                            <td><span>2015.2.25</span></td>
+                            <td><span>2015.2.26</span></td>
+                            <td><span></span></td>
+                            <td><span class="red">Android</span></td>
+                            <td><span class="green">正常</span></td>
+                            <td><span>255</span></td>
+                            <td><span>美食文化</span></td>
+                            <td><span>交换机咖啡话声甫落</span></td>
+                            <td class="col-sm-3"><span>把南京后飞吧四点半和免费大巴上班的发送不放吧上播放机哈斯广发萨斯办法说</span></td>
+                        </tr>
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#" onclick="operation()">POPOVER</a></td>
+                            <td><span>2015.2.25</span></td>
+                            <td><span>2015.2.26</span></td>
+                            <td><span></span></td>
+                            <td><span class="red">Android</span></td>
+                            <td><span class="red">封禁</span></td>
+                            <td><span>255</span></td>
+                            <td><span>美食文化</span></td>
+                            <td><span>交换机咖啡话声甫落</span></td>
+                            <td class="col-sm-3"><span>把南京后飞吧四点半和免费大巴上班的发送不放吧上播放机哈斯广发萨斯办法说</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+            <br />
+            <div class="adm-check left">
+                <label><input type="checkbox" class="allChecked" onClick="selectAllDels()"><span>全选</span></label>
+                <span>选中项：</span>
+            </div>
+            <label><a class="btn btn-primary pull-right" href="javascript:void(0);" onclick="room()"><i class="fa fa-eye fa-lg"></i>小黑屋</a></label>
+            <div class="cle"></div>
+            <div class="right">
+                <p class="right">共有333条记录，每页100条</p><br/>
+                <div class="pagination">
+                    <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                </div>
+                <div class="cle"></div>
+           </div>
+           <div class="cle"></div>
+        </div>
+    </body>
+
+</html>

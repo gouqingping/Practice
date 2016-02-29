@@ -1,0 +1,57 @@
+/* CSS Document */
+td img{
+	width:30px;
+	height:30px
+}
+
+.topdataBody{
+	margin: 20px;
+	color: #333;
+}
+
+.chechBox a {
+	color: #333;
+}
+
+.topdataBody h5 {
+	font-weight: bold;
+}
+
+.topData {
+	margin: 15px 0;
+}
+
+.chechBox {
+	color: #333;
+	font-weight: bold;
+	margin: 10px;
+}
+
+.chechBox b {
+	margin: 0 5px;
+	color: red
+}
+
+
+[contenteditable="true"]{
+	border-radius: 2px;
+    box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+    cursor: text;
+    display: block;
+    font-size: 13px;
+    margin: 10px 0;
+    min-height: 80px;
+    outline: 0 none;
+    overflow: auto;
+    padding: 5px;
+    width: 100%;
+    word-wrap: break-word;
+    z-index: auto;
+    border:1px solid #dcdcdc;
+    color: #333;
+}
+
+[contenteditable="true"]:focus{
+	border-color: #4285f4;
+	box-shadow: 0 0 4px rgba(0,0,0,0.3)
+}

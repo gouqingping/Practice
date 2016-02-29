@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            用户管理
+        </title>
+        <link rel="shortcut icon" href="static/bitbug_favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/todc-bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/responsive-nav.css">
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/common.js"></script>
+        <script src="static/js/bootstrap.js"></script>
+		<script src="static/js/responsive-nav.min.js"></script>
+        <script src="http://malsup.github.io/jquery.form.js"></script>
+    </head>
+    <body>
+        <div class="bg blackroom none"></div>
+            <div class="modal-ok none" style="left:40%; padding:20px;top:30%" id="success">
+                <div style="padding-bottom:15px;" id="text"></div>
+                <div style=" width:120px; margin:0 auto">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onClick="text_hide()">取消</button>
+                <button type="button" class="btn btn-primary" onClick="text_hide()">发布</button>
+                </div>
+            </div>
+        <!-- 小黑屋-->
+        <div class="modal-dialog room none">
+            <div class="modal-ok">
+            	<div class="animate">
+                	<div class="offno">
+                    	<span class="black">对以上 4 人的操作</span>
+                	</div>
+                </div>
+                <div class="col-md-12">
+                <div class="details">
+                    <div class="col-md-3">当前状态:</div>
+                    <div class="col-md-9 red">封停</div>
+                    <div class="cle">
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">封停日期:</div>
+                    <div class="col-md-9">2015-4-20 12:00</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">封停时长:</div>
+                    <div class="col-md-9">
+                        <div class="col-lg-1">
+                            <select class="form-control">
+                                <option>1天</option>
+                                <option>3天</option>
+                                <option>5天</option>
+                                <option>7天</option>
+                                <option>30天</option>
+                                <option>100天</option>
+                                <option>永久</option>
+                                <option selected="true">解封</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cle"></div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">解封日期:</div>
+                    <div class="col-md-9">无</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">封禁人:</div>
+                    <div class="col-md-9">管理员001</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">原因:</div>
+                    <div class="col-md-9">
+                        <div class="text-div" contenteditable="true"><p></p></div>
+                    </div>
+                </div>
+                <br/>
+                <div class="overflow">
+                	<div class="info-details">
+                        <div class="details">
+                            <div class="col-md-3 list">花信</div>
+                            <div class="col-md-5">2015.01.25 封停3天</div>
+                            <div class="col-md-3">讨论违法</div>
+                        </div>
+                        <div class="details">
+                            <div class="col-md-3 list">系统</div>
+                            <div class="col-md-5">2015.01.28 解封</div>
+                            <div class="col-md-3">系统</div>
+                        </div>
+                    </div>
+                    <div class="info-details">
+                        <div class="details">
+                            <div class="col-md-3 list">深情不及酒伴</div>
+                            <div class="col-md-5">2015.01.25 封停3天</div>
+                            <div class="col-md-3">讨论违法</div>
+                        </div>
+                        <div class="details">
+                            <div class="col-md-3 list">系统</div>
+                            <div class="col-md-5">2015.01.28 解封</div>
+                            <div class="col-md-3">系统</div>
+                        </div>
+                    </div>
+                    <div class="info-details">
+                        <div class="details">
+                            <div class="col-md-3 list">月半弯，好浪漫</div>
+                            <div class="col-md-5">2015.01.25 封停3天</div>
+                            <div class="col-md-3">讨论违法</div>
+                        </div>
+                        <div class="details">
+                            <div class="col-md-3 list">系统</div>
+                            <div class="col-md-5">2015.01.28 解封</div>
+                            <div class="col-md-3">系统</div>
+                        </div>
+                    </div>
+                    <div class="info-details">
+                        <div class="details">
+                            <div class="col-md-3 list">张开草</div>
+                            <div class="col-md-5">2015.01.25 封停3天</div>
+                            <div class="col-md-3">讨论违法</div>
+                        </div>
+                        <div class="details">
+                            <div class="col-md-3 list">系统</div>
+                            <div class="col-md-5">2015.01.28 解封</div>
+                            <div class="col-md-3">系统</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offno">
+                    <a href="javascript:void(0);" onclick="room()" class="btn btn-default">关闭</a>
+                    <a href="javascript:void(0);" onclick="room()" class="btn btn-primary">保存并关闭</a>
+                </div>
+            </div>
+        </div>
+            </div>
+        <!--个人资料 -->
+        <div class="bg tion none">
+        </div>
+        <div class="modal-dialog modalShow none"> 
+            <div class="modal-ok">
+            	<div class="animate">
+                	<div class="neme">
+                    	<div class="photo-img left"><img class="toux" src="static/images/tx-man.png" /></div>
+                    	<h5 class="left uneme">POPOVER12345678</h5>
+                        <div class="cle"></div>
+                	</div>
+                </div> 
+            <div class="col-md-12">
+                <div class="details">
+                    <div class="col-md-3">ID:</div>
+                    <div class="col-md-9">5468435</div>
+                    <div class="cle"></div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">邮箱:</div>
+                    <div class="col-md-9">popover@emil.com</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">平台:</div>
+                    <div class="col-md-9">IPhone手机客户端</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">性别:</div>
+                    <div class="col-md-9">男</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">注册ID:</div>
+                    <div class="col-md-9">192.168.1.255</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">地址:</div>
+                    <div class="col-md-9">中国成都四川</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">认证:</div>
+                    <div class="col-md-9">
+                        <form class="apfoRm"><select class="form-control apEnd"></select></form>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">个性网址:</div>
+                    <div class="col-md-9">http://niuniu.com/popover</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">注册时间:</div>
+                    <div class="col-md-9">2015.01.25</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">最后登陆:</div>
+                    <div class="col-md-9">2015.04.20</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">牛币:</div>
+                    <div class="col-md-9">2505</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">发帖数:</div>
+                    <div class="col-md-9">1118</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">状态:</div>
+                    <div class="col-md-9 green">正常<!--封停 class="col-md-9 red"--></div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">介绍:</div>
+                    <div class="col-md-9">是否不希望在小屏幕设备上所有列都堆叠在一起？是否不希望在小屏幕设备上所有列都堆叠在一起？是否不希望在小屏幕设备上所有列都堆叠在一起？是否不希望在小屏幕设备上所有列都堆叠在一起？</div>
+                </div>
+                <div class="cle"></div>
+                <div class="neme">
+                    <label>
+                        <a href="javascript:void(0);" class="btn btn-default hideapEnd">关闭</a>
+                    </label>
+                    <button type="submit" class="btn btn-primary hideapEnd subEd"/>
+                        <span>保存并关闭</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+      </div>
+        <div class="adm-cover">
+<!-- NAV -->
+<div class="navbar navbar-inverse left">
+    <div class="navbar-header">
+      <!-- 自适应隐藏导航展开按钮 -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav sidebar adm">
+            <h3>后台管理</h3><br/>
+            <li><a href="index.html">面板</a></li>
+            <li class="active act"><a href="user.html">用户</a></li>
+            <li><a href="content.html">内容</a></li>
+            <li><a href="interest.html">兴趣</a></li>
+            <li><a href="publicize.html">灯箱</a></li>
+            <li><a href="#">牛币</a></li>
+            <li><a href="#" style="padding-left: 40px;">认证</a></li>
+            <li><a href="#" style="padding-left: 40px;">打款</a></li>
+            <div class="admin">
+                <span>管理员001</span>|
+                <a href="#">退出</a>
+            </div>
+        </ul>
+    </div>
+</div>
+
+        	<div class="adm-user">
+            	<div class="main-box clearfix">
+                	<div class="col-lg-1">
+                        <select class="form-control">
+                            <option>称昵</option>
+                            <option>邮箱</option>
+                            <option>城市</option>
+                            <option>简介</option>
+                            <option>注册IP</option>
+                            <option>注册时间</option>
+                            <option selected="true">封禁</option>
+                        </select>
+                    </div>
+                	<input class="form-control adm-search left" type="text" placeholder="搜索">
+                	<a class="btn btn-default left" type="submit">搜索</a>
+            	</div>
+            <div class="text-center">
+             <h3>用户管理</h3><hr />
+            </div>
+            <div class="table-responsive table-res clearfix">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th><a href="javascript:void(0);">ID</a></th>
+                            <th><a href="javascript:void(0);" onClick="botsort(this)">
+                                    称昵
+                                    <img src="static/images/sort_asc_icon.png" class="none img_bot"/>
+                                    <img src="static/images/sort_asc_icon.png" class="none img_top"/>
+                                    <!--这里的img是在同等下面，排序优先-->
+                                </a></th>
+                            <th><a href="javascript:void(0);" onClick="botsort(this)">邮箱</a></th>
+                            <th><a href="javascript:void(0);">性别</a></th>
+                            <th><a href="javascript:void(0);">牛币</a></th>
+                            <th><a href="javascript:void(0);">发帖</a></th>
+                            <th><a href="javascript:void(0);">注册IP</a></th>
+                            <th><a href="javascript:void(0);">注册日期</a></th>
+                            <th><a href="javascript:void(0);">最后登录</a></th>
+                            <th><a href="javascript:void(0);">状态</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1">1</label></td>
+                            <td><a href="#" class="profile">POPOVER</a></td>
+                            <td><span>popoover@emil.com</span></td>
+                            <td><span>男</span></td>
+                            <td><span>825.25</span></td>
+                            <td><span class="fa-stack">555555</span></td>
+                            <td><span class="fa-stack">192.168.1.255</span></td>
+                            <td><span class="fa-stack">2015.01.25</span></td>
+                            <td><span class="fa-stack">2015.04.20</span></td>
+                            <td><span class="fa-stack red">封禁</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br/>
+                <div class="adm-check left">
+                    <label><input type="checkbox" class="allChecked" onclick="selectAllDels()"><span>全选</span></label>
+                    <span>选中项：</span>
+                </div>
+                <label><a class="btn btn-primary pull-right" href="#" onclick="room()"><i class="fa fa-eye fa-lg"></i>小黑屋</a></label>
+                <label><a class="btn btn-default  pull-right" href="#" onclick="confirm()"><i class="fa fa-eye fa-lg"></i>发布公告</a></label>
+                <div class="cle"></div>
+            <div class="right">
+            <p class="right">共有333条记录，每页100条</p><br/>
+            <div class="pagination">
+                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+            </div>
+            <div class="cle"></div>
+           </div>
+           <div class="cle"></div>
+        </div>
+    </body>
+
+</html>

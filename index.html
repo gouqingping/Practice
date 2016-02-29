@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans"> 
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>面板</title>
+        <link rel="shortcut icon" href="static/bitbug_favicon.ico">
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/todc-bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/index.css">
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/responsive-nav.min.js"></script>
+        <script src="static/js/bootstrap.js"></script>
+        <script src="static/js/index.js"></script>
+        <script src="static/js/common.js"></script>
+    </head>
+
+    <body>
+<!-- NAV -->
+<div class="navbar navbar-inverse left">
+    <div class="navbar-header">
+      <!-- 自适应隐藏导航展开按钮 -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav sidebar adm">
+            <h3>后台管理</h3><br/>
+            <li class="active act"><a href="index.html">面板</a></li>
+            <li><a href="user.html">用户</a></li>
+            <li><a href="content.html">内容</a></li>
+            <li><a href="interest.html">兴趣</a></li>
+            <li><a href="publicize.html">灯箱</a></li>
+            <li><a href="#">牛币</a></li>
+            <li><a href="#" style="padding-left: 40px;">认证</a></li>
+            <li><a href="#" style="padding-left: 40px;">打款</a></li>
+            <div class="admin">
+                <span>管理员001</span>|
+                <a href="#">退出</a>
+            </div>
+        </ul>
+    </div>
+</div>
+
+        <div class="adm-user adm_coll">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3">
+                    <div class="panel panel-dark panel-colorful">
+                        <div class="panel-body text-center">
+                            <p class="text-uppercase mar-btm text-sm">85,269</p>
+                            <img src="static/images/yh.png" />
+                            <hr>
+                            <p class="h2 text-thin">254,487K</p>
+                            <small><span class="text-semibold">相比昨天增长 7%</span></small>
+                        </div>
+                    </div>
+                    <div class="main_none none">
+                        <span>历史数据查询</span>
+                        <a href="javascript:void(0);" onClick="top_month()" class="top_bold">前一月</a>
+                        <a href="javascript:void(0);" onClick="bot_month()" class="bot_bold">后一月</a>
+                        <a href="javascript:void(0);" onClick="this_month()" class="this_bold">最新</a>
+                    </div>
+                    <div class="top_month none panel-dark"><!--前月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.02.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                    <div class="bot_month none panel-dark"><!--后月-->
+                        <table class="table table-hover text-right">
+                                <tr><td><div class="left">2015.03.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                    <div class="this_month none panel-dark"><!--这个月-->
+                        <table class="table table-hover text-right">
+                                <tr><td><div class="left">2015.04.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="panel panel-danger panel-colorful">
+                        <div class="panel-body text-center">
+                            <p class="text-uppercase mar-btm text-sm">999,999</p>
+                            <img src="static/images/tz.png" />
+                            <hr>
+                            <p class="h2 text-thin">999,999K</p>
+                            <small><span class="text-semibold">相比昨天增长 154</span></small>
+                        </div>
+                     </div>
+                     <div class="main_none none">
+                        &nbsp;
+                  	 </div>
+                    <div class="bot_month none panel-danger"><!--下月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.03.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                    <div class="this_month none panel-danger"><!--这个月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.04.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                    <div class="top_month none panel-danger"><!--上月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.02.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="panel panel-primary panel-colorful">
+                        <div class="panel-body text-center">
+                            <p class="text-uppercase mar-btm text-sm">54K</p>
+                            <img src="static/images/hf.png" />
+                            <hr>
+                            <p class="h2 text-thin">2,423，2K</p>
+                            <small><span class="text-semibold">相比昨天增长 954</span></small>
+                        </div>
+                    </div>
+                    <div class="main_none none"> &nbsp;</div>
+                    <div class="bot_month none panel-primary"><!--下月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.03.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                    <div class="this_month none panel-primary">
+                        <!--这月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.04.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                    <div class="top_month none panel-primary"><!--上月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.02.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3">
+                    <div class="panel panel-orange panel-colorful">
+                        <div class="panel-body text-center">
+                            <p class="text-uppercase mar-btm text-sm">233,666</p>
+                            <img src="static/images/xq.png" />
+                            <hr>
+                            <p class="h2 text-thin">2,423,6K</p>
+                            <small><span class="text-semibold">相比昨天增长 954</span></small>
+                        </div>
+                    </div>
+                    <div class="main_none none"><a  href="javascript:void(0);" class="right" onClick="month_close()">收起</a>&nbsp;</div>
+                    <div class="bot_month none panel-orange"><!--下月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.03.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                    <div class="this_month none panel-orange"><!--这月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.04.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                    <div class="top_month none panel-orange"><!--上月-->
+                        <table class="table table-hover text-right">
+                            <tr><td><div class="left">2015.02.01</div><span>54K</span></td></tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="cle"></div>
+                <div class="main-box">
+                        <span>历史数据查询</span>
+                        <a href="javascript:void(0);" onClick="top_month()" class="top_bold">前一月</a>
+                        <a href="javascript:void(0);" onClick="bot_month()" class="bot_bold">后一月</a>
+                        <a href="javascript:void(0);" onClick="this_month()" class="this_bold">最新</a>
+                        <a  href="javascript:void(0);" class="right none month_close" onClick="month_close()">收起</a>
+                        <hr />
+                    </div>
+            </div>
+            <h3>今日热门</h3>
+            <hr />
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="table-responsive clearfix">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th><a href="javascript:void(0);">帖子</a></th>
+                                    <th><a href="javascript:void(0);">回复数量</a></th>
+                                    <th><a href="javascript:void(0);">所属兴趣</a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                                <tr>
+                                   <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">人如果不装逼，那么和咸鱼有什么区别</a></td>
+                                    <td><span>898,458K</span></td>
+                                    <td><span>搞笑</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="table-responsive clearfix">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th><a href="javascript:void(0);">兴趣名</a></th>
+                                    <th><a href="javascript:void(0);">新帖数量</a></th>
+                                    <th><a href="javascript:void(0);">关注数量</a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="list"><a href="#">搞笑</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">十七岁的女孩想变坏</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">那些不能告诉大人的事</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">圣多美和普林西比民主</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">亚历克斯山大·阿姆斯特朗艾</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">搞笑</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">搞笑</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">搞笑</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">搞笑</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="list"><a href="#">搞笑</a></td>
+                                    <td><span>898,45</span></td>
+                                    <td><span>898,458K</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

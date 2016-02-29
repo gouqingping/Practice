@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>
+            兴趣管理
+        </title>
+        <link rel="shortcut icon" href="static/bitbug_favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/todc-bootstrap.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/common.css" />
+        <link rel="stylesheet" type="text/css" href="static/css/interest.css">
+        <script src="static/js/jquery.min.js"></script>
+        <script src="static/js/common.js"></script>
+        <script src="static/js/interest.js"></script>
+        <script src="static/js/bootstrap.js"></script>
+		<script src="static/js/responsive-nav.min.js"></script>
+    </head>
+    <body>
+        <div class="modal-dialog TopDetails none">
+            <div class="modal-ok">
+                <div class="animate">
+                    <div class="neme">
+                        <div class="photo-img left">
+                            <img src="http://7xj7ce.com1.z0.glb.clouddn.com/interest/image/s3df25645-658b-0c20-2e05-de482e4fe049.jpg">
+                        </div>
+                        <h5 class="left">宅基地</h5>
+                        <div class="cle"></div>
+                    </div>
+                </div>
+                <div class="topdataBody">
+                    <div class="topData">
+                        <div class="chechBox">
+                            <input name="topData" type="checkbox" value="">[<b>月榜</b>]</input>
+                            <a href="#">高压电线底下活动一定要注意啊</a>
+                        </div>
+                        <div class="chechBox">
+                            <input name="topData" type="checkbox" value="">[<b>周榜</b>]</input>
+                            <a href="#">EXO有毒</a>
+                        </div>
+                        <div class="chechBox">
+                            <input name="topData" type="checkbox" value="">[<b>日榜</b>]</input>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                    <h5>取消置顶描述:</h5>
+                    <div contenteditable="true"><p></p></div>
+                    <div>
+                        <input name="" type="checkbox" value="">选中退款/不退款</input>
+                    </div>
+                    <div class="offno">
+                        <a class="btn btn-primary"onclick="hideTopDetails(this)"href="javascript:void(0);"> 保存并关闭 </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 小黑屋-->
+        <div class="bg blackroom none"onclick="hideTopDetails(this)"></div>
+        <div class="modal-dialog room none">
+            <div class="modal-ok">
+                <div class="animate">
+                	<div class="neme">
+                    	<span class="black">
+                        美食文化、旅游、电影、笑话、小说、美食文化、旅游、电影、笑话、小说、美食文化、旅游、电影、笑话、小说
+                    <span>
+                	</div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">
+                        处理日期:
+                    </div>
+                    <div class="col-md-9 red">
+                        2015.02.25 12:00
+                    </div>
+                   <div class="cle"></div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">
+                        处理方式:
+                    </div>
+                    <div class="col-md-9">
+                        <div class="col-lg-1">
+                            <select class="form-control">
+                                <option selected="true">
+                                    审核通过
+                                </option>
+                                <option>
+                                    审核拒绝
+                                </option>
+                                <option>
+                                    封停
+                                </option>
+                                <option>
+                                    解封
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cle"></div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">
+                        封停时长:
+                    </div>
+                    <div class="col-md-9">
+                        <div class="col-lg-1">
+                            <select class="form-control">
+                                <option>
+                                    1天
+                                </option>
+                                <option>
+                                    3天
+                                </option>
+                                <option>
+                                    5天
+                                </option>
+                                <option>
+                                    7天
+                                </option>
+                                <option>
+                                    30天
+                                </option>
+                                <option>
+                                    100天
+                                </option>
+                                <option>
+                                    永久
+                                </option>
+                                <option selected="true">
+                                    解封
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="cle">
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">
+                        解封日期:
+                    </div>
+                    <div class="col-md-9">
+                        无
+                    </div>
+                    <div class="cle">
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="col-md-3">
+                        处理原因:
+                    </div>
+                    <div class="col-md-9">
+                        <div class="text-div" contenteditable="true">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cle"></div>
+                </div>
+                <br />
+                <br />
+                <div class="offno">
+                    <a href="javascript:void(0);" onclick="room()" class="btn btn-primary">
+                        保存并关闭
+                    </a>
+                    <a href="javascript:void(0);" onclick="room()" class="btn btn-default">
+                        关闭
+                    </a>
+                </div>
+                <br />
+            </div>
+         </div>
+<!-- NAV -->
+<div class="navbar navbar-inverse left">
+    <div class="navbar-header">
+      <!-- 自适应隐藏导航展开按钮 -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav sidebar adm">
+            <h3>后台管理</h3><br/>
+            <li><a href="index.html">面板</a></li>
+            <li><a href="user.html">用户</a></li>
+            <li><a href="content.html">内容</a></li>
+            <li class="active act"><a href="interest.html">兴趣</a></li>
+            <li><a href="publicize.html">灯箱</a></li>
+            <li><a href="#">牛币</a></li>
+            <li><a href="#" style="padding-left: 40px;">认证</a></li>
+            <li><a href="#" style="padding-left: 40px;">打款</a></li>
+            <div class="admin">
+                <span>管理员001</span>|
+                <a href="#">退出</a>
+            </div>
+        </ul>
+    </div>
+</div>
+
+        <div class="adm-user">
+            <div class="main-box clearfix">
+                <input class="form-control adm-search left" type="text" placeholder="搜索">
+                <a class="btn btn-default left" type="submit">
+                    搜索
+                </a>
+                <div class="cle"></div>
+            </div>
+            <div class="text-center">
+             <h3>申请中的兴趣</h3>
+             <hr />
+            </div>
+            <div class="table-responsive table-res clearfix">
+                <table class="table table-hover text-left">
+                    <thead>
+                        <tr >
+                            <th><a href="javascript:void(0);">编号</a></th>
+	                        <th><a href="javascript:void(0);">兴趣名</a></th>
+                            <th><a href="javascript:void(0);">状态</a></th>
+                            <th><a href="javascript:void(0);">关注数</a></th>
+                            <th><a href="javascript:void(0);">图标</a></th>
+                            <th><a href="javascript:void(0);">建立时间</a></th>
+                            <th><a href="javascript:void(0);">更新时间</a></th>
+                            <th><a href="javascript:void(0);">申请人</a></th>
+                            <th><a href="javascript:void(0);">审核人</a></th>
+                            <th class="col-lg-5"><a href="javascript:void(0);">兴趣描述</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>正常</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td  class="col-lg-5"><a onclick="topDetails(this)">查看</a></td>
+                        </tr> 
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td  class="col-lg-5"><span>享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr> 
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td><span>享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr>  
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td><span>享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr>  
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td><span>享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr>  
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td><span>享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr>  
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td><span>享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr>  
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td><span class="violet">享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr>  
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td><span>享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr>  
+                        <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td><span>享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr>  <tr>
+                            <td><label><input type="checkbox" name="preDelCheck" value="1" />001</label></td>
+                            <td><a href="#">美食文化weaweaeada</a></td>
+                            <td class="green"><span>申请中</span></td>
+                            <td><span>0</span></td>
+                            <td><img src="static/images/ms.jpg"/></td>
+                            <td><span>2015.01.25</span></td>
+                            <td><span>2015.04.25</span></td>
+                            <td><span>POPOVER</span></td>
+                            <td><span>管理员001</span></td>
+                            <td><span>享受饮食文化，要通过食物这个载体去实现。</span></td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <div class="adm-check left">
+                    <label><input type="checkbox" class="allChecked" onClick="selectAllDels()"><span>全选</span></label>
+                    <span>选中项：</span>
+                </div>
+                <label><a class="btn btn-primary pull-right" href="#" onclick="room()"><i class="fa fa-eye fa-lg"></i>小黑屋</a></label>
+                <div class="cle"></div>
+            <div class="right">
+            <p class="right">共有333条记录，每页100条</p><br/>
+            <div class="pagination">
+                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+            </div>
+            <div class="cle"></div>
+           </div>
+           <div class="cle"></div>
+        </div>
+    </body>
+
+</html>
